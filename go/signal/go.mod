@@ -1,4 +1,4 @@
-module github.com/comoc-im/message/blob/main/go/signal
+module github.com/comoc-im/message/go/signal
 
 go 1.17
 
