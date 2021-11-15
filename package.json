@@ -1,6 +1,10 @@
 {
-  "name": "@comoc/message",
-  "version": "0.0.1",
+  "name": "@comoc-im/message",
+  "version": "0.1.0",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "description": "Definition of messages between Comoc IM servers and clients.",
   "main": "./dist/message.umd.js",
   "module": "./dist/message.es.js",
