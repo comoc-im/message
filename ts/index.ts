@@ -1,8 +1,8 @@
 const AddressLength = 255;
 const SignalPrefix = 0b11111111
 
-export const PING = new Uint8Array([0b0]);
-export const PONG = new Uint8Array([0b1]);
+export const PING = 0b0;
+export const PONG = 0b1;
 
 type Address = Uint8Array;
 
