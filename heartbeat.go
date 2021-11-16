@@ -1,4 +1,4 @@
 package message
 
-const PING = 0
-const PONG = 1
+const PING = byte(0b0)
+const PONG = byte(0b1)
