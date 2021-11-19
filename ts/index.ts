@@ -40,7 +40,8 @@ export class Signal {
     }
 
     public encode(): Uint8Array {
-        const result = new Uint8Array([])
+        const len = 1 + 2 * AddressLength + this.payload.byteLength
+        const result = new Uint8Array(len)
         result.set([SignalPrefix])
         result.set(this.to, 1);
         result.set(this.from, 1 + AddressLength);
