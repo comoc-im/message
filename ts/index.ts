@@ -4,7 +4,7 @@ const SignalPrefix = 0b11111111
 export const PING = 0b0;
 export const PONG = 0b1;
 
-type Address = Uint8Array;
+export type Address = Uint8Array;
 
 export class Signal {
     from: Address;
