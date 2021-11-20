@@ -19,6 +19,7 @@
     ],
     "types": [
       "vite/client",
+      "jest",
       "node"
     ],
     "skipLibCheck": true

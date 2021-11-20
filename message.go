@@ -2,11 +2,12 @@ package message
 
 type Message interface {
 	Encode() []byte
-	Decode() error
+	Decode(source *[]byte) error
 }
 
-type messageType byte
+type MessageType byte
 
 const (
-	SignalPrefix messageType = 0b11111111
+	Signal MessageType = 0b11111111
+	SignIn MessageType = 0b00000000
 )
