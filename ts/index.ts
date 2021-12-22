@@ -1,4 +1,3 @@
-export { PING, PONG } from './heartbeat'
 export type { Address } from './address'
 export { Signal } from './signal'
 export { SignIn } from './auth'
