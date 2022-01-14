@@ -7,14 +7,17 @@ for (let n = 0; n <= 0xff; ++n) {
     byteToHex.push(hexOctet)
 }
 
-export function bytesToAddress(bytes: Uint8Array): Address {
-    const raw = Array.prototype.map
-        .call(bytes, (n) => byteToHex[n])
-        .join('')
-    return raw.replace(/0*$/ig, '')
+export function bytesToHex(buffer: ArrayBuffer | Uint8Array): string {
+    const bytes = new Uint8Array(buffer)
+    const raw = Array.prototype.map.call(bytes, (n) => byteToHex[n]).join('')
+    return raw.replace(/0*$/gi, '')
 }
 
-export function addressToBytes(address: Address): Uint8Array {
+export function hexToBytes(address: Address): Uint8Array {
     const result: string[] = address.match(/[\da-f]{2}/gi) || []
     return new Uint8Array(result.map((h) => parseInt(h, 16)))
 }
+
+export const bytesToAddress: (bytes: Uint8Array) => Address = bytesToHex
+export const addressToBytes: (address: Address) => Uint8Array = hexToBytes
+
