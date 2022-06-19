@@ -1,6 +1,6 @@
-import { Address, ADDRESS_MAX_BYTE_LENGTH } from './address';
+import { ADDRESS_MAX_BYTE_LENGTH } from './address';
 import { SignInPrefix } from './message';
-import { addressToBytes, bytesToAddress } from './util';
+import { Address, addressToBytes, bytesToAddress } from '@comoc-im/id';
 
 export class SignIn {
     public readonly address: Address;

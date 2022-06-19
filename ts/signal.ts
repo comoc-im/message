@@ -1,5 +1,5 @@
-import { Address, ADDRESS_MAX_BYTE_LENGTH } from './address';
-import { addressToBytes, bytesToAddress } from './util';
+import { ADDRESS_MAX_BYTE_LENGTH } from './address';
+import { Address, addressToBytes, bytesToAddress } from '@comoc-im/id';
 import { SignalPrefix } from './message';
 
 export class Signal {
